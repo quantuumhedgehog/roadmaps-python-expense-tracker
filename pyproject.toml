@@ -1,17 +1,28 @@
 [project]
-name = "roadmaps-python-expense-tracker"
-version = "0.1.0"
+name = "expense-tracker"
 description = "Add your description here"
-readme = "README.md"
+readme = {file = "README.md"}
+license = { file = "LICENSE" }
+version = "0.0.0"
+dynamic = ["version"]
+keywords = ["exspenses", "cli", "management", "tracker", "productivity"]
 authors = [
-    { name = "quantuumhedgehog", email = "lutso.mykhailo@gmail.com" }
+    { name = "@quantuumhedgehog", email = "lutso.mykhailo@gmail.com" }
+]
+maintainers = [
+    { name = "@quantuumhedgehog", email = "lutso.mykhailo@gmail.com" }
 ]
 requires-python = ">=3.12"
 dependencies = []
 
 [project.scripts]
-roadmaps-python-expense-tracker = "roadmaps_python_expense_tracker:main"
+exspense-tracker = "exspense_tracker.__main__:main"
 
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=61", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools_scm]
+version_scheme = "no-guess"
+local_scheme = "no-local"
